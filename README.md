@@ -1,10 +1,10 @@
 ## Pesan Makan
 
 Aplikasi ini digunakan untuk projek submisi dicoding. Aplikasi ini dibuat menggunakan : 
-    - HTML
-    - VueJS
-    - Line LIFF
-    - Javascript
+    - HTML  
+    - VueJS  
+    - Line LIFF  
+    - Javascript  
 
 
 Web URL : [https://pesan-makan.herokuapp.com](https://pesan-makan.herokuapp.com)   
