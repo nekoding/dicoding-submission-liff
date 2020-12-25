@@ -10,6 +10,7 @@ const app = new Vue({
             userId: '',
             displayName: ''
         },
+        total: 0,
         cart: [],
         products: [
             {
@@ -53,8 +54,10 @@ const app = new Vue({
                     
                     this.cart.forEach(item => {
                         templateMessage += `*${item.qty} ${item.name}* \n`
+                        this.total += item.qty * item.harga
                     });
 
+                    templateMessage += `\n*Total biayanya : ${this.grandTotal}*\n`
                     templateMessage += "\nPesanan kakak akan segera diproses, kami akan memberitahukan jika pesanan sudah bisa diambil \n"
                     templateMessage += "Mohon ditunggu ya"
 
@@ -120,5 +123,10 @@ const app = new Vue({
                 liff.getProfile().then(profile => this.line = profile)
             }
         })
+    },
+    computed: {
+        grandTotal() {
+            return this.total.toLocaleString('id-ID', {style:'currency', currency:'IDR'})
+        }
     }
 })
