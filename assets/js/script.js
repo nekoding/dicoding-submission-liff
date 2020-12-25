@@ -110,6 +110,13 @@ const app = new Vue({
                 liff.logout()
                 window.location.reload()
             }
+        },
+        openExternalWindow(event) {
+            event.preventDefault();
+            liff.openWindow({
+                url: "https://bc991d24ebd8.ngrok.io",
+                external: true
+            })
         }
     },
     mounted() {
