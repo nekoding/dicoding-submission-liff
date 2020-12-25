@@ -30,7 +30,7 @@ Vue.component('x-products', {
     },
     methods: {
         addCart() {
-            this.$emit('add-to-cart', this.qty)
+            this.$emit('add-to-cart')
         }
     },
     computed: {
