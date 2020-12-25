@@ -1,7 +1,7 @@
 const app = new Vue({
     el: "#app",
     data: {
-        liffId: '1655318859-VG9rLMYn',
+        liffId: '1655498013-w65bBEl9',
         alertShow: false,
         isLoggedIn: false,
         message: '',
@@ -47,14 +47,30 @@ const app = new Vue({
         checkout() {
             if (liff.isLoggedIn()) {
                 if (liff.isInClient()) {
+                    let templateMessage = "Hallo kak, \n"
+                    templateMessage += "Terima kasih sudah memesan \n"
+                    templateMessage += "Berikut adalah list pesanan yang kakak order mohon dicek ya : \n\n"
+                    
+                    this.cart.forEach(item => {
+                        templateMessage += `*${item.qty} ${item.name}* \n`
+                    });
+
+                    templateMessage += "\nPesanan kakak akan segera diproses, kami akan memberitahukan jika pesanan sudah bisa diambil \n"
+                    templateMessage += "Mohon ditunggu ya"
+
                     liff.sendMessages([
                         {
-                            'type': 'text',
-                            'text': 'asu'
+                          type: 'text',
+                          text: templateMessage
                         }
-                    ])
-                        .then(() => alert('Pesan berhasil dikirimkan'))
-                        .catch(error => console.error(error))
+                      ])
+                        .then(() => {
+                          alert('Message sent successfully')
+                          window.location.reload()
+                        })
+                        .catch((err) => {
+                          console.error(err)
+                        });
                 } else {
                     alert('liff messages tidak bisa digunakan di external browser')
                 }
