@@ -1,6 +1,6 @@
 ## Pesan Makan
 
-Aplikasi ini digunakan untuk projek submisi dicoding. Aplikasi ini dibuat menggunakan : 
+Aplikasi ini digunakan untuk projek submisi dicoding. Aplikasi ini dibuat menggunakan :  
     - HTML  
     - VueJS  
     - Line LIFF  
