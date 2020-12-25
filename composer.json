@@ -1,0 +1,13 @@
+{
+    "name": "enggar/dicoding-submission-liff",
+    "description": "Pesan makan tanpa ribet",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Enggar Tivandi",
+            "email": "enggartivandi@outlook.com"
+        }
+    ],
+    "require": {}
+}
