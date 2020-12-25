@@ -114,7 +114,7 @@ const app = new Vue({
         openExternalWindow(event) {
             event.preventDefault();
             liff.openWindow({
-                url: "https://bc991d24ebd8.ngrok.io",
+                url: "https://pesan-makan.herokuapp.com/",
                 external: true
             })
         }
